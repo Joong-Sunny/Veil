@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import LoginButton from "@/app/components/LoginButton";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <div className="flex items-center">
+        <span> 로그인상태 상단바 입니다</span>
+        <LoginButton></LoginButton>
+      </div>
+      {children}
+      </body>
     </html>
   )
 }
