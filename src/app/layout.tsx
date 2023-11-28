@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div>
-        <span> This is layout</span>
+      <div className="flex items-center">
+        <span> 로그인상태 상단바 입니다</span>
         <LoginButton></LoginButton>
       </div>
       {children}
