@@ -1,11 +1,12 @@
 'use client';
 
 import {signIn, signOut} from "next-auth/react";
+import Spacing from "@/app/components/Spacing";
 
 export default function Register() {
   return (
     <div className="flex h-screen justify-center items-center">
-      <div> {/* Wrapper for the form and social buttons */}
+      <div>
         <form
           method="POST"
           action="/api/auth/signup"
@@ -36,13 +37,16 @@ export default function Register() {
             id/pw 가입요청
           </button>
         </form>
-        <div className="flex flex-row justify-center space-x-4 mt-4"> {/* Container for social buttons */}
+        <Spacing direction="vertical" size={4} />
+        <Spacing direction="vertical" size={4} />
+        <div className="flex flex-col"> {/* Container for social buttons */}
           <button
             className="bg-yellow-400 border-2 border-transparent rounded-md text-lg p-3 w-96"
             onClick={() => signIn("kakao")}
           >
             카카오 로그인
           </button>
+          <Spacing direction="vertical" size={4} />
           <button
             className="bg-black text-white border-2 border-transparent rounded-md text-lg p-3 w-96"
             onClick={() => signIn("github")}
