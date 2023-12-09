@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function TapBar() {
 
   return (
-    <div className="flex justify-around w-screen">
+    <footer className="flex justify-around absolute bottom-0 w-full border-t border-gray-300">
       <Link href="/">
         <Image
           src="/home.svg"
@@ -29,17 +29,29 @@ export default function TapBar() {
         />
         <span>swipe</span>
       </Link>
-      <Link href="/mypage">
+      <Link href="/message">
         <Image
-          src="/user.svg"
+          src="/message.svg"
           alt="user"
           className="dark:invert"
           width={24}
           height={24}
           priority
         />
+        <span>message</span>
+      </Link>
+      <Link href="/mypage">
+        <Image
+          src="/user.svg"
+          alt="user"
+          className="text-blue-500"
+          width={24}
+          height={24}
+          priority
+        />
         <span>myInfo</span>
       </Link>
-    </div>
+
+    </footer>
   );
 }
