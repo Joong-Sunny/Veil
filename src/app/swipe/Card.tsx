@@ -9,7 +9,13 @@ type InstagramCardProps = {
 const Card = ({imageUrl, caption}: InstagramCardProps) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={imageUrl} alt="Celebrity" />
+      <Image
+        src={imageUrl}
+        alt="celebrity"
+        width={350}
+        height={350}
+        priority
+      />
       <div className="px-6 py-4">
         <p className="text-gray-700 text-base">
           {caption}
