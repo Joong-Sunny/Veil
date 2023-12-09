@@ -10,7 +10,9 @@ export default function LoginStatus() {
   const {data: session} = useSession();
 
   return (
-    <div className="flex justify-between w-screen">
+    <>
+      {/*<div className="flex items-center bg-amber-100">*/}
+      {/*<div className="flex justify-between w-screen">*/}
       <div>
         <span> ( 개발용 로그인 영역 ) </span>
         {session ?
@@ -27,6 +29,8 @@ export default function LoginStatus() {
           마이페이지
         </button>
       </Link>
-    </div>
+      {/*</div>*/}
+      {/*</div>*/}
+    </>
   );
 }
