@@ -1,39 +1,36 @@
-'use strict';
-
-import React from 'react';
-import Card from './Card';
+'use client';
+import React, {useState} from 'react';
+import {swipeableDummyUsers} from "@/app/swipe/dummy-user-info";
+import TinderCard from "@/app/swipe/TinderCard";
 
 const Swipe = () => {
-  const celebrities = [
-    {
-      imageUrl: 'https://github.com/VEIL-findSomeone/app/assets/63194662/8f0fd1e5-b64f-4974-8b03-244deb72894b',
-      caption: '멋있는 남자 1'
-    },
-    {
-      imageUrl: 'https://github.com/VEIL-findSomeone/app/assets/63194662/8f0fd1e5-b64f-4974-8b03-244deb72894b',
-      caption: '잘생긴 남자 2'
-    },
-    {
-      imageUrl: 'https://github.com/VEIL-findSomeone/app/assets/63194662/8f0fd1e5-b64f-4974-8b03-244deb72894b',
-      caption: '괜찮은 남자 3'
-    },
-    {
-      imageUrl: 'https://github.com/VEIL-findSomeone/app/assets/63194662/8f0fd1e5-b64f-4974-8b03-244deb72894b',
-      caption: '이상한 남자 4'
-    },
-    {
-      imageUrl: 'https://github.com/VEIL-findSomeone/app/assets/63194662/8f0fd1e5-b64f-4974-8b03-244deb72894b',
-      caption: '나쁜남자 5'
-    },
-  ];
+  const [users, setUsers] = useState(swipeableDummyUsers);
+
+  const handleSwipe = (id: number, direction: ('left' | 'right')) => {
+    console.log(`Swiped ${direction} on user with id: ${id}`);
+    // Remove the swiped user from the stack
+    setUsers(currentUsers => currentUsers.filter(user => user.id !== id));
+  };
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {celebrities.map((celebrity, index) => (
-          <Card key={index} imageUrl={celebrity.imageUrl} caption={celebrity.caption} />
-        ))}
-      </div>
+    <div className="flex justify-center items-center h-screen">
+      {users.map((user, index) => (
+        <div
+          key={user.id}
+          className="absolute"
+          style={{
+            transform: `translateY(-${index * 4}px) scale(${1 - index * 0.05})`,
+            zIndex: users.length - index,
+          }}
+        >
+          <TinderCard
+            name={user.name}
+            age={user.age}
+            imgUrl={user.mainImgUrl}
+            onSwipe={(direction) => handleSwipe(user.id, direction)}
+          />
+        </div>
+      ))}
     </div>
   );
 };
