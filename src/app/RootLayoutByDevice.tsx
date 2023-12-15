@@ -1,10 +1,8 @@
 "use client";
 
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {isMobile} from "@/utils/device-detector";
 import PhoneFrame from "@/app/PhoneFrame";
-import LoginStatus from "@/app/components/LoginStatus";
-import TapBar from "@/app/TapBar";
 import Image from "next/image";
 
 interface RootLayoutProps {
@@ -13,14 +11,11 @@ interface RootLayoutProps {
 
 const RootLayoutByDevice = ({children}: RootLayoutProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [deviceStatus, setDeviceStatus] = useState(false);
 
   useEffect(() => {
-    setDeviceStatus(isMobile());
     const handleResize = () => {
       if (ref.current) {
         const scaleValue = window.innerHeight / 1012;
-        console.log("scaleValue is..", scaleValue)
         ref.current.style.transform = `scale(${scaleValue})`;
       }
     };
@@ -32,8 +27,8 @@ const RootLayoutByDevice = ({children}: RootLayoutProps) => {
   }, []);
 
   return (
-    <div className="flex h-full w-screen overflow-hidden bg-[#f5f5f5] bg-cover bg-center">
-      {deviceStatus ? (
+    <div className="flex h-[100dvh] w-screen overflow-hidden bg-[#f5f5f5] bg-cover bg-center">
+      {isMobile() ? (
         <div className="relative mx-auto h-full w-full bg-white">
           {children}
         </div>
