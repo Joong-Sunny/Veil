@@ -18,7 +18,7 @@ export default function TapBar() {
   }
 
   return (
-    <footer className="flex justify-around absolute bottom-0 w-full p-3 border-t border-gray-300">
+    <footer className="flex justify-around absolute bottom-0 w-full p-3 border-t border-gray-300 z-9999">
       <Link href="/">
         <svg xmlns="http://www.w3.org/2000/svg" height={svgHeight} width={svgWidth}
              viewBox="0 0 576 512">
