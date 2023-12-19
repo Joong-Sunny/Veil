@@ -1,5 +1,4 @@
 function userAgentMatch(regex: RegExp): boolean {
-  console.log("loooook", navigator.userAgent)
   return navigator.userAgent.match(regex) !== null;
 }
 

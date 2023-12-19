@@ -3,8 +3,8 @@
 import Link from "next/link";
 import {usePathname} from 'next/navigation'
 
-const svgHeight = 30
-const svgWidth = 30
+const svgHeight = 22
+const svgWidth = 22
 
 export default function TapBar() {
 

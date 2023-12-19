@@ -14,43 +14,92 @@ export default function MessageList() {
     // <Card key="1" className="w-full max-w-md overflow-hidden">
     <Card key="1" className="h-fit">
       <CardHeader className="p-4">
-        <h2 className="text-2xl font-semibold">Direct Messages</h2>
+        <h2 className="text-2xl font-semibold">메시지</h2>
       </CardHeader>
       <CardContent className="p-0">
         <ScrollArea className="h-[540px]">
           <div className="grid gap-4 p-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Avatar className="w-8 h-8 border">
-                  <AvatarImage alt="@user1" src="/placeholder-user1.jpg" />
+              <div className="flex items-start gap-3">
+                <Avatar className="w-20 h-20 border">
+                  <AvatarImage alt="@user1" src="/dummy-face/dummy1.jpeg" />
                   <AvatarFallback>U1</AvatarFallback>
                 </Avatar>
-                <Link className="text-sm font-semibold" href="#">
-                  user1
-                </Link>
+                <div>
+                  <Link className="text-xl font-semibold" href="#">
+                    최강민우
+                  </Link>
+                  <p className="text-lg text-gray-600">고고</p>
+                </div>
               </div>
               <div className="text-xs text-gray-500">2h ago</div>
             </div>
-            <p className="text-sm text-gray-600 pl-12 pr-4">안녕하세요 ㅎㅎ</p>
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Avatar className="w-8 h-8 border">
-                  <AvatarImage alt="@user2" src="/placeholder-user2.jpg" />
+              <div className="flex items-start gap-3">
+                <Avatar className="w-20 h-20 border">
+                  <AvatarImage alt="@user2" src="/dummy-face/dummy2.jpeg" />
                   <AvatarFallback>U2</AvatarFallback>
                 </Avatar>
-                <Link className="text-sm font-semibold" href="#">
-                  user2
-                </Link>
+                <div>
+                  <Link className="text-xl font-semibold" href="#">
+                    김철수
+                  </Link>
+                  <p className="text-lg text-gray-600">오늘 어떠실까요</p>
+                </div>
               </div>
-              <div className="text-xs text-gray-500">4h ago</div>
+              <div className="text-xs text-gray-500">2h ago</div>
             </div>
-            <p className="text-sm text-gray-600 pl-12 pr-4">오늘 어떄</p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <Avatar className="w-20 h-20 border">
+                  <AvatarImage alt="@user3" src="/dummy-face/dummy3.jpeg" />
+                  <AvatarFallback>U3</AvatarFallback>
+                </Avatar>
+                <div>
+                  <Link className="text-xl font-semibold" href="#">
+                    동해번쩍서해번쩍
+                  </Link>
+                  <p className="text-lg text-gray-600">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                </div>
+              </div>
+              <div className="text-xs text-gray-500">2h ago</div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <Avatar className="w-20 h-20 border">
+                  <AvatarImage alt="@user4" src="/dummy-face/dummy4.jpeg" />
+                  <AvatarFallback>U4</AvatarFallback>
+                </Avatar>
+                <div>
+                  <Link className="text-xl font-semibold" href="#">
+                    킬동홍
+                  </Link>
+                  <p className="text-lg text-gray-600">내가 그랬잖아ㅎㅎㅎ</p>
+                </div>
+              </div>
+              <div className="text-xs text-gray-500">2h ago</div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-start gap-3">
+                <Avatar className="w-20 h-20 border">
+                  <AvatarImage alt="@user5" src="/dummy-face/dummy5.jpeg" />
+                  <AvatarFallback>U5</AvatarFallback>
+                </Avatar>
+                <div>
+                  <Link className="text-xl font-semibold" href="#">
+                    박보곰
+                  </Link>
+                  <p className="text-lg text-gray-600">32분전에 읽음</p>
+                </div>
+              </div>
+              <div className="text-xs text-gray-500">2h ago</div>
+            </div>
           </div>
         </ScrollArea>
       </CardContent>
       <CardFooter className="p-4 border-t">
-        <div className="flex items-center justify-between gap-3">
-          <Input className="flex-grow" placeholder="Type a message..." />
+        <div className="flex w-full items-center justify-around gap-3">
+          <Input className="flex-grow" placeholder="메시지를 입력해 주세요..." />
           <Button size="icon" variant="ghost">
             <SendIcon />
           </Button>

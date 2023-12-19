@@ -13,10 +13,10 @@ import {Button} from "@/components/ui/button"
 export default function Component() {
   return (
     <div key="1">
-      <Card className="w-full max-w-xs sm:max-w-2xl mx-auto">
+      <div className="w-full mx-auto">
         <CardHeader className="max-w-xs mx-auto">
-          <CardTitle>Manage Your Profile</CardTitle>
-          <CardDescription>Update your personal details and preferences.</CardDescription>
+          <CardTitle>프로필 수정하기</CardTitle>
+          <CardDescription>타인에게 더 매력적으로 어필해보세요</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 sm:space-y-8">
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-x-6 sm:space-y-0">
@@ -105,7 +105,7 @@ export default function Component() {
         <CardFooter>
           <Button className="w-full sm:ml-auto">Save Changes</Button>
         </CardFooter>
-      </Card>
+      </div>
     </div>
   )
 }
