@@ -103,7 +103,7 @@ export default function Component() {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full sm:ml-auto">Save Changes</Button>
+          <Button className="w-full sm:ml-auto bg-pink-500">Save Changes</Button>
         </CardFooter>
       </div>
     </div>

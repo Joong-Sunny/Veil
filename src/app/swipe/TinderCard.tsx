@@ -56,6 +56,8 @@ const TinderCard: React.FC<TinderCardProps> = ({onSwipe, imgUrl, name, age}) => 
                   onTouchStart={handleTouchStart}
                   onContextMenu={handleContextMenu}
     >
+      <h2 className="text-3xl font-semibold bg-amber-300">{name}</h2>
+      <h2 className="text-3xl font-semibold bg-blue-400">{age}</h2>
     </animated.div>
   );
 };

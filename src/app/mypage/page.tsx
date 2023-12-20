@@ -1,17 +1,17 @@
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { CardContent, Card } from "@/components/ui/card"
+import {AvatarImage, AvatarFallback, Avatar} from "@/components/ui/avatar"
+import {Button} from "@/components/ui/button"
+import {CardContent, Card} from "@/components/ui/card"
 import Link from "next/link";
 
 export default function Component() {
   return (
     <>
-    <div className="bg-[#020729] h-80 w-full"/>
+      <div className="bg-[#020729] h-80 w-full" />
       <div className="max-w-2xl mx-auto py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <header className="border-b border-gray-200 sm:flex sm:items-center sm:justify-between sm:pb-4">
           <div className="flex items-center space-x-5">
             <Avatar className="h-16 w-16">
-              <AvatarImage alt="@username" src="/placeholder-avatar.jpg" />
+              <AvatarImage alt="@username" src="/dummy-face/dummy4.jpeg" />
               <AvatarFallback>U</AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
@@ -27,36 +27,36 @@ export default function Component() {
             </Link>
           </div>
         </header>
-          <div className="flex items-center justify-between">
-            <div className="flex-1 overflow-auto py-2">
-              <nav className="grid items-start px-5 text-lg font-medium">
-                <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                  href="#"
-                >
-                  스토어
-                </Link>
-                <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                  href="#"
-                >
-                  고객센터
-                </Link>
-                <Link
-                  className="flex items-center gap-3 rounded-lg bg-gray-100 px-3 py-2 text-gray-900  transition-all hover:text-gray-900 dark:bg-gray-800 dark:text-gray-50"
-                  href="#"
-                >
-                  보낸 좋아요
-                </Link>
-                <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                  href="#"
-                >
-                  사연 보내기
-                </Link>
-              </nav>
-            </div>
+        <div className="flex items-center justify-between">
+          <div className="flex-1 overflow-auto py-2">
+            <nav className="grid items-start px-5 text-lg font-medium">
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                스토어
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                고객센터
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg bg-gray-100 px-3 py-2 text-gray-900  transition-all hover:text-gray-900 dark:bg-gray-800 dark:text-gray-50"
+                href="#"
+              >
+                보낸 좋아요
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                href="#"
+              >
+                사연 보내기
+              </Link>
+            </nav>
           </div>
+        </div>
       </div>
     </>
   )
