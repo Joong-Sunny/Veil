@@ -33,7 +33,7 @@ export default function Component() {
             </Avatar>
           </div>
           <div className="bg-blue-500 text-white rounded-lg px-4 py-2 text-sm flex-grow">
-            I'm doing great, thank you!
+            Im doing great, thank you!
           </div>
         </div>
         <div className="chat-message flex items-end space-x-2">
@@ -55,7 +55,7 @@ export default function Component() {
             </Avatar>
           </div>
           <div className="bg-blue-500 text-white rounded-lg px-4 py-2 text-sm flex-grow">
-            I'm planning to go hiking. How about you?
+            하이킹 가실래요?
           </div>
         </div>
       </div>
